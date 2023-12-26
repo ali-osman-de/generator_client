@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import GenerateCategories from "./components/GenerateCategories";
+import Navigator from "./components/Navigator";
+import GeneratePush from "./components/GeneratePush";
+import { Col, Row } from "reactstrap";
+import Result from "./components/Result";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navigator />
+      <Row>
+        <Col xs="4" className="mx-5 mt-5">
+          <GenerateCategories />
+        </Col>
+        <Col xs="4" className="mx-5 mt-5">
+          <GeneratePush />
+        </Col>
+        <Col xs="4" className="mx-5 mt-5">
+         <Result/>
+        </Col>
+      </Row>
     </div>
   );
 }
